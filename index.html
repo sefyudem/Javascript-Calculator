@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script>
+		function back(){
+			var exp = document.calculatrice.textview.value;
+            document.calculatrice.textview.value = exp.substring(0,exp.length-1); 
+		}
+	</script>
+</head>
+<body>
+   <div class="calculatrice">
+   	<form name="calculatrice">
+   		<input name="textview" class="screen" type="textview">
+   	</form>
+   	<table>
+   		<tr>
+   			<td><input type="button" class="bn" value="C" onclick=" document.calculatrice.textview.value = ''"/></td>
+   			<td><input type="button" class="bn" value="Su" onclick="back()"/></td>
+   			<td><input type="button" class="bn" value="√" onclick="document.calculatrice.textview.value = Math.sqrt(document.calculatrice.textview.value)"/></td>
+   			<td><input type="button" class="bn" value="/" onclick="document.calculatrice.textview.value += '/'"/></td>
+   		</tr>
+   		<tr>
+   			<td><input type="button" class="bn" value="7" onclick="document.calculatrice.textview.value += '7'"/></td>
+   			<td><input type="button" class="bn" value="8" onclick="document.calculatrice.textview.value += '8'"/></td>
+   			<td><input type="button" class="bn" value="9" onclick="document.calculatrice.textview.value += '9'"/></td>
+   			<td><input type="button" class="bn" value="x" onclick="document.calculatrice.textview.value += '*'"/></td>
+   		</tr>
+   		<tr>
+   			<td><input type="button" class="bn" value="4" onclick="document.calculatrice.textview.value += '4'"/></td>
+   			<td><input type="button" class="bn" value="5" onclick="document.calculatrice.textview.value += '5'"/></td>
+   			<td><input type="button" class="bn" value="6" onclick="document.calculatrice.textview.value += '6'"/></td>
+   			<td><input type="button" class="bn" value="-" onclick="document.calculatrice.textview.value += '-'"/></td>
+   		</tr>
+   		<tr>
+   			<td><input type="button" class="bn" value="1" onclick="document.calculatrice.textview.value += '1'"/></td>
+   			<td><input type="button" class="bn" value="2" onclick="document.calculatrice.textview.value += '2'"/></td>
+   			<td><input type="button" class="bn" value="3" onclick="document.calculatrice.textview.value += '3'"/></td>
+   			<td rowspan="2"><input style="height: 118px" type="button" class="bn plus" value="+" onclick="document.calculatrice.textview.value += '+'"/></td>
+   		</tr>
+   		<tr>
+   			<td><input type="button" class="bn" value="0" onclick="document.calculatrice.textview.value += '0'"/></td>
+   			<td><input type="button" class="bn" value="." onclick="document.calculatrice.textview.value += '.'"/></td>
+   			<td><input type="button" class="bn" value="=" onclick="document.calculatrice.textview.value = eval(document.calculatrice.textview.value)"/></td>
+   		</tr>
+   	</table>
+   </div>
+</body>
+</html>
